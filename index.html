@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
-        "http://www.w3.org/TR/html4/strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+        "https://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="en">
 <head>
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -106,7 +106,7 @@
                 var oIndex = cur
                 var value = val;
                 var oScript=document.createElement('script');
-                oScript.src='http://api.douban.com/book/subjects?q='+value+'&alt=xd&callback=fn1&start-index='+oIndex;
+                oScript.src='https://api.douban.com/book/subjects?q='+value+'&alt=xd&callback=fn1&start-index='+oIndex;
                 document.body.appendChild(oScript);
             },
             changeHandler:function(a){//浏览器回退变更input的value
@@ -116,7 +116,7 @@
         seachClick:function(e){
             if(vm.config.searchVale!=''){
             window.location.hash = avalon.vmodels['pagination'].getHref('first',vm.config.searchVale);
-            avalon.loadScript('http://api.douban.com/book/subjects?q='+vm.config.searchVale+'&alt=xd&callback=fn1')
+            avalon.loadScript('https://api.douban.com/book/subjects?q='+vm.config.searchVale+'&alt=xd&callback=fn1')
             }
         }
     })
